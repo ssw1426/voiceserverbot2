@@ -1,5 +1,5 @@
 import discord
-import token
+import os
 
 client = discord.Client()
 
@@ -16,7 +16,7 @@ async def on_message(message):
                     msg = message.content[4:]
                     if message.author.guild_permissions.manage_messages:
                         embed = discord.Embed(title="후원 감사합니다", description= "```" + msg + " 후원 진심으로 감사합니다```", color=0x00D8FF)
-                        await client.channel.send(embed=embed)
+                        await message.channel.send(embed=embed)
                         await message.delete()
                     else:
                         await message.channel.send(f'> ** <@!{message.author.id}>님 명령어를 사용 할수 없습니다.**')
