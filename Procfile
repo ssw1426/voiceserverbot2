@@ -1,1 +1,1 @@
-worker: python Announcement_-_V10.py
+worker: python main2.py
