@@ -3,7 +3,6 @@ import os
 
 client = discord.Client()
 
-
 @client.event
 async def on_ready():
     print("봇이 정상적으로 실행되었습니다.")
